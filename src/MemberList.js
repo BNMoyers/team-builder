@@ -1,26 +1,19 @@
 import React, { useState, setState } from 'react';
-import { render } from 'react-dom';
 
 
-const memberObject = [
-    {
-        id: 1,
-        username: 'brittmo',
-        email: 'brittmo@brittcodes.com',
-        role: 'Queen of Everything'
-    }
-]
 
-function MemberList() {
+
+
+function MemberList(props) {
     return (
       <div>
-        {memberObject.map(member => {
+        {props.members.map(member => {
           return(
-          <div className="character-card" key={memberObject.id}>
+          <div className="character-card" key={member.username}>
             
-            <h3>{memberObject.username}</h3>
-            <div>email: {memberObject.email}</div>
-            <div>role: {memberObject.role}</div>
+            <h3>{member.username}</h3>
+            <div>email: {member.email}</div>
+            <div>role: {member.role}</div>
 
           </div>
         )})}

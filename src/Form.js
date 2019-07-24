@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-export default function Form() {
+
+export default function Form(props) {
   const [member, setMember] = useState({
     username: "",
     email: "",
@@ -11,12 +12,17 @@ export default function Form() {
     const updateMember = { ...member, [event.target.name]: event.target.value };
 
     setMember(updateMember);
+    
   }
 
   function handleSubmit(event) {
     event.preventDefault();
+    props.addToList(member);
+    setMember({ username: "",
+    email: "",
+    role: ""})
   }
-
+  console.log(member);
   return (
     <form onSubmit={handleSubmit}>
       <fieldset>
