@@ -4,7 +4,7 @@ export default function Form() {
   const [member, setMember] = useState({
     username: "",
     email: "",
-    password: ""
+    role: ""
   });
 
   function handleChange(event) {
@@ -20,7 +20,7 @@ export default function Form() {
   return (
     <form onSubmit={handleSubmit}>
       <fieldset>
-        <legend>Add to List:</legend>
+        <legend>Join the Team!</legend>
         <div className="form-group row">
           <label className="col-sm-2 col-form-label">
             Username
@@ -51,15 +51,15 @@ export default function Form() {
           </div>
         </div>
         <div className="form-group">
-          <label>Password</label>
+          <label>Role</label>
 
           <div className="col-sm-10">
             <input
-              type="password"
+              type="role"
               className="form-control"
-              name="password"
-              placeholder="Choose a password"
-              value={member.password}
+              name="role"
+              placeholder="Describe your role"
+              value={member.role}
               onChange={handleChange}
             />
           </div>
