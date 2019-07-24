@@ -22,7 +22,7 @@ export default function Form() {
       <fieldset>
         <legend>Add to List:</legend>
         <div className="form-group row">
-          <label for="username" className="col-sm-2 col-form-label">
+          <label className="col-sm-2 col-form-label">
             Username
             <div className="col-sm-10">
               <input
@@ -37,7 +37,7 @@ export default function Form() {
           </label>
         </div>
         <div className="form-group">
-          <label for="email">Email</label>
+          <label>Email</label>
 
           <div className="col-sm-10">
             <input
@@ -51,7 +51,7 @@ export default function Form() {
           </div>
         </div>
         <div className="form-group">
-          <label for="password">Password</label>
+          <label>Password</label>
 
           <div className="col-sm-10">
             <input
