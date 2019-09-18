@@ -3,18 +3,33 @@ import React from 'react';
 const Members = props => {
     return (
         //format this as table
-        <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Character Name</th>
+                    <th>Player Name</th>
+                    <th>Email</th>
+                    <th>Class</th>
+                    <th>Party Role</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            
             {props.members.map(member => (
-                <p>
-                    <span>{member.characterName}</span>
-                    <span>{member.playerName}</span>
-                    <span>{member.email}</span>
-                    <span>{member.class}</span>
-                    <span>{member.role}</span>
-
-                </p>
+                <tr key ={member.id}>
+                    <td>{member.characterName}</td>
+                    <td>{member.playerName}</td>
+                    <td>{member.email}</td>
+                    <td>{member.class}</td>
+                    <td>{member.role}</td>
+                    <td><button onClick={()=> {props.editRow(member)}}>Edit</button></td>
+                </tr>
             ))}
-        </div>
+        
+            </tbody>
+        </table>
+       
     )
 }
 
