@@ -6,8 +6,10 @@ const Members = props => {
         <div>
             {props.members.map(member => (
                 <p>
-                    <span>{member.name}</span>
+                    <span>{member.characterName}</span>
+                    <span>{member.playerName}</span>
                     <span>{member.email}</span>
+                    <span>{member.class}</span>
                     <span>{member.role}</span>
 
                 </p>

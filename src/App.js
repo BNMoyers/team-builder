@@ -8,9 +8,11 @@ function App() {
   const [members, setMembers] = useState([
     {
       id: 1,
-      name: "Lorelei",
+      characterName: "Lorelei",
+      playerName: 'Britt',
       email: 'lorelei@dragonheist.com',
-      role: 'Warlock'
+      class: 'Warlock',
+      role: 'DPS'
     }
   ]);
   
@@ -25,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <div className='member-list'>
-        <h1>Team Members</h1>
+        <h1>Party Members</h1>
         <Members members={members} />
         <MemberForm addNewMembers={addNewMembers} />
         
