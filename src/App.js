@@ -40,9 +40,12 @@ function App() {
 
 
   return (
-    <div className="App">
-      <div className='member-list'>
-        <h1>Party Members</h1>
+    
+      <div className='container'>
+        <h1>TTRPG Group Roster</h1>
+        <div className="flex-row">
+        <div className="flex-large">
+
         {edit ? ( 
         <div>
           <h2>Edit Group</h2>
@@ -56,12 +59,10 @@ function App() {
             <h2>Add Party Members</h2>
             <MemberForm addNewMembers={addNewMembers} />
           </div>)}
-          
-
-              <Members members={members} memberToEdit={memberToEdit} />
-       
-        
-        
+          </div><div className='flex-large'>
+          <h2>Dragonheist Party</h2>
+          <Members members={members} memberToEdit={memberToEdit} />
+          </div>
       </div>
     </div>
   );
