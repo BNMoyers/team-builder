@@ -23,7 +23,7 @@ const Members = props => {
                     <td>{member.email}</td>
                     <td>{member.class}</td>
                     <td>{member.role}</td>
-                    <td><button onClick={()=> {props.editRow(member)}}>Edit</button></td>
+                    <td><button onClick={()=> {props.memberToEdit(member)}}>Edit</button></td>
                 </tr>
             ))}
         
